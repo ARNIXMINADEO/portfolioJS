@@ -1,0 +1,46 @@
+:root{
+    --primary-color:#909EA1;
+    --secundary-color:#6E8D93;
+    --dark:#383F44;
+    --light:#C78F7E;
+    --lighter: white;
+    font-size: 10px;
+}
+.header{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--lighter);
+    position: relative;
+}
+.container-logo{
+    width: 5rem;
+    height: 5rem;
+}
+.logo-img{
+    width: 5rem;
+}
+.nav{
+    width: 4rem;
+}
+.menu-icon{
+    fill: var(--light);
+}
+.menu-options{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+    position: absolute;
+    right: 0;
+    background: var(--lighter);
+    border-radius: 1rem 0 0 1rem;
+}
+.btn{
+    width: 16rem ;
+    height: 8rem;
+    border-radius: 1rem;
+}
+.main{
+    background: url("assets/main-background.jpg") center center/cover;
+}
