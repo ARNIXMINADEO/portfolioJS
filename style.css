@@ -6,6 +6,7 @@
     --lighter: white;
     font-size: 10px;
 }
+
 .body{
     font-family: 'Comfortaa', cursive;
 }
@@ -29,25 +30,35 @@
 }
 .nav{
     width: 4rem;
-    height: auto;
+    height: 5.5rem;
+}
+.menu{
+    position: absolute;
+    width: 50%;
+    height: calc(100vh - 5.5rem);
+    transition: all 1s ease-in-out;
+    left: -1px;
+    top: 5.5rem;
 }
 .menu-options{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+    background: var(--lighter);
+    border-radius: 0 2rem 2rem 0;
+    padding-top: 3rem;
+    transform: translateX(-100%);
+    z-index: 1;
+}
+.menu-options.__active{
+    transform: translateX(0);
+}
+.options{
     display: flex;
     flex-direction: column;
-    width: 50vw;
-    height: calc(100vh - 5.5rem);
     list-style: none;
     gap: 1rem;
-    background: var(--lighter);
-    border-radius: 2rem 0 0 2rem;
-    padding-top: 3rem;
-    transition: 1s;
-    z-index: 1;
-    position: absolute;
-    top: 5.5rem;
-    transform: translateX(50vw);
-    visibility: hidden;
-    opacity: 0;
 }
 .btn-menu{
     width: 16rem ;

@@ -1,12 +1,6 @@
-const menu = document.getElementById("menu-icon")
-const menu_options = document.getElementById("menu-options")
-
-
-menu.addEventListener("click", ()=>{
-    if (menu_options.style.transform == "translateX(-50vw)")
-     {
-        menu_options.style.transform == 0;
-    }else{
-        menu_options.style.transform == "translateX(-50vw)"
-    }
+const menuIcon = document.getElementById("menu-icon")
+const menuOptions = document.getElementById("menu-options")
+const menu = document.getElementById("menu")
+menuIcon.addEventListener("click", ()=>{
+    menuOptions.classList.toggle("__active");
 })
