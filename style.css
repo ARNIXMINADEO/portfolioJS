@@ -6,8 +6,12 @@
     --lighter: white;
     font-size: 10px;
 }
+.body{
+    font-family: 'Comfortaa', cursive;
+}
 .header{
     width: 100vw;
+    height: 5.5rem;
     display: flex;
     justify-content: space-between;
     background-color: var(--lighter);
@@ -15,13 +19,17 @@
 }
 .container-logo{
     width: 5rem;
-    height: 5rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .logo-img{
     width: 5rem;
 }
 .nav{
     width: 4rem;
+    height: auto;
 }
 .menu-icon{
     fill: var(--light);
@@ -29,18 +37,58 @@
 .menu-options{
     display: flex;
     flex-direction: column;
+    width: 50vw;
+    height: calc(100vh - 55px);
     list-style: none;
     gap: 1rem;
     position: absolute;
-    right: 0;
+    right: -50vw;
     background: var(--lighter);
-    border-radius: 1rem 0 0 1rem;
+    border-radius: 2rem 0 0 2rem;
+    padding-top: 3rem;
+
 }
-.btn{
+.btn-menu{
     width: 16rem ;
     height: 8rem;
     border-radius: 1rem;
 }
 .main{
-    background: url("assets/main-background.jpg") center center/cover;
+    width: 100vw;
+    height: calc(100vh - 55px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("assets/main-background.jpg") center center/cover no-repeat;
+}
+.main__h1{
+    font-size: 4.8rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+    color: var(--lighter);
+    text-shadow: .5rem .6rem .6rem var(--dark);
+    margin: 0 0 1.7rem 0;
+}
+.main__span{
+    font-size: 5.6rem;
+}
+.main__p{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--lighter);
+}
+.btn-main{
+    width: 15.5rem;
+    height: 6rem;
+    border-radius: 2rem;
+    color: var(--lighter);
+    border-color: var(--lighter);
+    font-size: 2rem;
+    position: absolute;
+    bottom: 8rem;
 }
