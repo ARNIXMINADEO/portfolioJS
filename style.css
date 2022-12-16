@@ -31,22 +31,23 @@
     width: 4rem;
     height: auto;
 }
-.menu-icon{
-    fill: var(--light);
-}
 .menu-options{
     display: flex;
     flex-direction: column;
     width: 50vw;
-    height: calc(100vh - 55px);
+    height: calc(100vh - 5.5rem);
     list-style: none;
     gap: 1rem;
-    position: absolute;
-    right: -50vw;
     background: var(--lighter);
     border-radius: 2rem 0 0 2rem;
     padding-top: 3rem;
-
+    transition: 1s;
+    z-index: 1;
+    position: absolute;
+    top: 5.5rem;
+    transform: translateX(50vw);
+    visibility: hidden;
+    opacity: 0;
 }
 .btn-menu{
     width: 16rem ;
