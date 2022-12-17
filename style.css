@@ -28,6 +28,10 @@
 .logo-img{
     width: 5rem;
 }
+.menu-icon{
+    width: 4rem;
+    height: 5.5rem;
+}
 .nav{
     width: 4rem;
     height: 5.5rem;
@@ -36,34 +40,41 @@
     position: absolute;
     width: 50%;
     height: calc(100vh - 5.5rem);
-    transition: all 1s ease-in-out;
-    left: -1px;
+    transition: all 1s ease-out;
     top: 5.5rem;
+    z-index: 1;
+    left: -100%;
 }
 .menu-options{
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-out;
     background: var(--lighter);
     border-radius: 0 2rem 2rem 0;
     padding-top: 3rem;
-    transform: translateX(-100%);
-    z-index: 1;
-}
-.menu-options.__active{
-    transform: translateX(0);
 }
 .options{
     display: flex;
     flex-direction: column;
     list-style: none;
     gap: 1rem;
+
 }
 .btn-menu{
     width: 16rem ;
     height: 8rem;
     border-radius: 1rem;
+    font-size: 1.4rem;
+    font-weight: light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.svg-menu{
+    width: 3.2rem;
+    height: 3.2rem;
 }
 .main{
     width: 100vw;
