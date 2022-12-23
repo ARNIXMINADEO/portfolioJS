@@ -10,6 +10,7 @@
 .body{
     font-family: 'Comfortaa', cursive;
 }
+/*Header*/
 .header{
     width: 100vw;
     height: 5.5rem;
@@ -19,8 +20,8 @@
     position: relative;
 }
 .container-logo{
-    width: 5rem;
-    height: auto;
+    width: 5.5rem;
+    height: 5.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,21 +30,26 @@
     width: 5rem;
 }
 .menu-icon{
-    width: 4rem;
-    height: auto;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
+    transition: 0.5s;
+    transform: rotateZ('0deg');
 }
 .nav{
     width: 4rem;
     height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .menu{
     position: absolute;
     width: 50%;
     height: calc(100vh - 5.5rem);
     transition: all 1s ease-out;
-    top: 5.5rem;
-    z-index: 1;
+    top: 5rem;
+    z-index: 5;
     left: -100%;
 }
 .menu-options{
@@ -87,9 +93,9 @@
     height: 3.2rem;
     fill: var(--primary-color);
 }
-.main{
+.main-header{
     width: 100vw;
-    height: calc(100vh - 55px);
+    height: calc(100vh - 5.5rem);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -97,7 +103,7 @@
     align-items: center;
     background: url("assets/main-background.jpg") center center/cover no-repeat;
 }
-.main__h1{
+.main-header__h1{
     font-size: 4.8rem;
     font-weight: bold;
     display: flex;
@@ -108,15 +114,15 @@
     text-shadow: .5rem .6rem .6rem var(--dark);
     margin: 0 0 1.7rem 0;
 }
-.main__span{
+.main-header__span{
     font-size: 5.6rem;
 }
-.main__p{
+.main-header__p{
     font-size: 2rem;
     font-weight: bold;
     color: var(--lighter);
 }
-.btn-main{
+.btn-main-header{
     width: 15.5rem;
     height: 6rem;
     border-radius: 2rem;
@@ -126,9 +132,28 @@
     position: absolute;
     bottom: 8rem;
 }
-.btn-main:hover{
+.btn-main-header:hover{
     background-color: var(--secundary-color);
 }
-.btn-main:active{
+.btn-main-header:active{
     background-color: var(--primary-color);
+}
+/*Main*/
+
+.about{
+    width: 100vw;
+    height: 100vh;
+}
+.page-header{
+    width: 33.5rem;
+    height: 4.5;
+    display: flex;
+}
+.mini-nav{
+    display: flex;
+    width: 8rem;
+    height: 2rem;
+}
+.mini-title{
+    display: flex;
 }
