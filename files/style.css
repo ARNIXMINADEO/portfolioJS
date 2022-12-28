@@ -6,10 +6,6 @@
     --lighter: white;
     font-size: 10px;
 }
-.btn-bd-outline-secondary{
-    --bs-btn-color: var(--primary-color);
-    --bs-btn-bg: var(--bd-violet);
-}
 
 .body{
     font-family: 'Comfortaa', cursive;
@@ -74,7 +70,7 @@
     padding: 0;
 }
 .btn-menu{
-    width: 16rem ;
+    width: 16rem;
     height: 8rem;
     border-radius: 1rem;
     font-size: 1.4rem;
@@ -105,7 +101,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url("assets/main-background.jpg") center center/cover no-repeat;
+    background: url("/assets/main-background.jpg") center center/cover no-repeat;
 }
 .main-header__h1{
     font-size: 4.8rem;
@@ -268,8 +264,12 @@
     background-color: var(--light);
     border-color: transparent;
 }
-.btn-cv:active{
+.btn-cv:hover{
     background-color: var(--light);
+    border-color: transparent;
+}
+.btn-cv:active{
+    background-color: var(--lighter);
     border-color: transparent;
 }
 /*Skills*/
