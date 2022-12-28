@@ -5,6 +5,7 @@
     --light-dark:#c7735a;
     --light:#C78F7E;
     --lighter: #ffff;
+    --ligther-dark:#bebebe;
     font-size: 10px;
 }
 
@@ -49,7 +50,7 @@
     width: 50%;
     height: calc(100vh - 5.5rem);
     transition: all 1s ease-out;
-    top: 5rem;
+    top: 5.5rem;
     z-index: 5;
     left: -100%;
 }
@@ -81,18 +82,20 @@
     align-items: center;
     gap: 2rem;
     cursor: pointer;
+    border: .1rem solid var(--dark);
+    background-color: var(--lighter);
 }
 .btn-menu:hover{
-    background-color: var(--secundary-color);
-    border-color: var(--secundary-color);
+    border-color:var(--dark);
+    background-color: var(--lighter);
 }
 .btn-menu:active{
-    background-color: var(--secundary-color);
+    color: var(--ligther-dark);
+    border-color: var(--ligther-dark);
 }
 .svg-menu{
     width: 3.2rem;
     height: 3.2rem;
-    fill: var(--primary-color);
 }
 .main-header{
     width: 100vw;
@@ -177,7 +180,7 @@
 }
 .mini-title{
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: flex-end;
     width: 8rem;
     height: 2rem;
