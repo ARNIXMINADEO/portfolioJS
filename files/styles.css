@@ -122,21 +122,17 @@
     font-weight: bold;
     color: var(--lighter);
 }
-.btn-main-header{
+.btn-main{
     width: 15.5rem;
     height: 6rem;
     border-radius: 2rem;
-    color: var(--lighter);
-    border-color: var(--lighter);
     font-size: 2rem;
     position: absolute;
     bottom: 8rem;
 }
-.btn-main-header:hover{
-    background-color: var(--secundary-color);
-}
-.btn-main-header:active{
-    background-color: var(--primary-color);
+.btn-main:hover{
+    color: var(--lighter);
+    background-color: transparent;
 }
 /*Main*/
 /*Headers*/
@@ -265,11 +261,8 @@
     border-color: transparent;
 }
 .btn-cv:hover{
+    color: var(--lighter);
     background-color: var(--light);
-    border-color: transparent;
-}
-.btn-cv:active{
-    background-color: var(--lighter);
     border-color: transparent;
 }
 /*Skills*/
