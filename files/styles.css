@@ -2,8 +2,9 @@
     --primary-color:#909EA1;
     --secundary-color:#6E8D93;
     --dark:#383F44;
+    --light-dark:#c7735a;
     --light:#C78F7E;
-    --lighter: white;
+    --lighter: #ffff;
     font-size: 10px;
 }
 
@@ -129,10 +130,17 @@
     font-size: 2rem;
     position: absolute;
     bottom: 8rem;
+    border: .1rem solid var(--lighter);
+    background-color: transparent;
+    color: var(--lighter);
 }
 .btn-main:hover{
+    border-color: var(--lighter);
     color: var(--lighter);
-    background-color: transparent;
+}
+.btn-main:active{
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 /*Main*/
 /*Headers*/
@@ -250,6 +258,7 @@
     left: 0;
     bottom: 9rem;
 }
+/*CV button About*/
 .btn-cv{
     width: 20rem;
     height: 4rem;
@@ -258,12 +267,16 @@
     font-size: 1.4rem;
     font-weight: 400;
     background-color: var(--light);
-    border-color: transparent;
+    border: none;
 }
 .btn-cv:hover{
     color: var(--lighter);
     background-color: var(--light);
-    border-color: transparent;
+    border: none;
+}
+.btn-cv:active{
+    background-color: var(--light-dark);
+    border: none;
 }
 /*Skills*/
 .skills{
