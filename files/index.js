@@ -15,6 +15,20 @@ menuIcon.addEventListener("click", ()=>{
     }
 })
 //Skills
+let skillBtnContent = document.getElementById("btn-skill-content")
+let skillButton = document.getElementById("btn-skills")
+skillButton.addEventListener("click", (e)=>{
+    if(skillButton.textContent == "See more"){
+        skillButton.textContent = "See less";
+        skillBtnContent.style.flexDirection = "column-reverse";
+
+    }else{
+        skillButton.textContent = "See more";
+        skillBtnContent.style.flexDirection = "column";
+    }
+    
+})
+
 let skillsList = []
 let skillsContent = document.getElementById("skills-content")
 class Skills{
