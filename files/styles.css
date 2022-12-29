@@ -209,7 +209,7 @@
 .about{
     width: 100%;
     height: 100vh;
-    background: url("/assets/portfolio-background.png") center center/cover no-repeat;
+    background: url("/assets/about-background.png") center center/cover no-repeat;
 }
 /*About Content*/
 .about-content{
@@ -288,7 +288,7 @@
 .skills{
     width: 100%;
     height: 100vh;
-    background: url("/assets/skills.png") center center/cover no-repeat;
+    background: url("/assets/skills-background.png") center center/cover no-repeat;
 }
 /*Skills Content*/
 .skills-content{
@@ -352,7 +352,7 @@
 .portfolio{
     width: 100%;
     height: 100vh;
-    background: url("/assets/portfolio.jpg") center center/cover no-repeat;
+    background: url("/assets/portfolio-background.png") center center/cover no-repeat;
 }
 /*Portfolio nav*/
 .portfolio-nav{
