@@ -348,6 +348,26 @@
     width: 2rem;
     height: 2rem;
 }
+/*Skill hover card*/
+.card-hover{
+    width: 14rem;
+    height: 18rem;
+    background-color: var(--secundary-color);
+    border-radius: 2rem;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+}
+.card-hover::after{
+    content: "";
+    width: 5rem;
+    height: 2.5rem;
+    clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
+    background-color: var(--secundary-color);
+    position: absolute;
+    top: -2.4rem;
+    right: 4.5rem;
+}
 /*Portfolio*/
 .portfolio{
     width: 100%;
