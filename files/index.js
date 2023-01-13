@@ -43,23 +43,16 @@ class Skills {
     }
 }
 
-skillsContent.addEventListener("click", (e) => {
-    let targetCard = skillsList.filter(card => card.id == e.target.id)
-    let card = document.createElement("div");
-    let content = `
-
-    `
-})
 
 //Skills creation
-let html = new Skills("HTML", "/assets/html.svg", "Html", "6", "Structure", "7");
-let css = new Skills("CSS", "/assets/css.svg", "Css", "5", "Style", "8");
-let js = new Skills("JS", "/assets/js.svg", "JavaScript", "6", "Funtionality", "5");
-let nodejs = new Skills("NODEJS", "/assets/nodejs.svg", "Node.JS", "4", "Funtionality", "6");
-let git = new Skills("GIT", "/assets/git.svg", "Git", "5", "Versions Control", "7");
-let github = new Skills("GITHUB", "/assets/github.svg", "Github", "5", "Remote", "6");
-let bootstrap = new Skills("BOOTSTRAP", "/assets/bootstrap.svg", "Bootstrap", "5", "Style/Structure");
-let react = new Skills("REACT", "/assets/react.svg", "React", "0", "Style/Funtionality", "7");
+let html = new Skills("HTML", "/assets/html.svg", "Html", "6", "Structure", "+7");
+let css = new Skills("CSS", "/assets/css.svg", "Css", "5", "Style", "+8");
+let js = new Skills("JS", "/assets/js.svg", "JavaScript", "6", "Funtionality", "+5");
+let nodejs = new Skills("NODEJS", "/assets/nodejs.svg", "Node.JS", "4", "Funtionality", "+6");
+let git = new Skills("GIT", "/assets/git.svg", "Git", "5", "Control", "7");
+let github = new Skills("GITHUB", "/assets/github.svg", "Github", "5", "Remote", "+6");
+let bootstrap = new Skills("BOOTSTRAP", "/assets/bootstrap.svg", "Bootstrap", "+5", "Style");
+let react = new Skills("REACT", "/assets/react.svg", "React", "0", "Reactive", "+7");
 
 skillsList.push(html, css, js, nodejs, git, github, bootstrap, react)
 
@@ -68,7 +61,7 @@ skillsList.forEach(e => {
     let img = document.createElement("img")
     skillCard.classList = "skill-card";
     skillCard.id = e.id;
-    skillCard.style.position = "relative"
+    skillCard.src = e.icon;
     img.classList = "card-img";
     img.id = e.id;
     img.src = e.icon
@@ -79,4 +72,33 @@ skillsList.forEach(e => {
         <img src="${e.icon}" id="${e.id}" alt="" class="card-img">
     </div>
     `*/
+    let content = `
+            <div class="card-hover ${e.id}">
+                    <p class="hover-title m-0">${e.name}</p>
+                    <p class="hover-lvl m-0">Lvl:${e.level}/10</p>
+                <div class="content-hover">
+                    <p class="hover-type">Tipo:</p>
+                    <p class="hover-description">${e.type}</p>
+                </div>
+                <div class="content-hover">
+                    <p class="hover-impact">Impacto:</p>
+                    <p class="hover-description">${e.impact}</p>
+                </div>
+            </div>
+            `
+    skillCard.innerHTML += content;
+
 });
+skillsContent.addEventListener("click", (e)=>{
+    let target = Array.from(skillsContent.getElementsByClassName("card-hover"));
+    let cards = skillsContent.getElementsByClassName("skill-card")
+    let filter = skillsList.filter(skill => skill.id == e.target.id)
+    let hover = skillsContent.getElementsByClassName(`${e.target.id}`)
+    console.log(e.target.id)
+    console.log(hover)
+    if(e.target.id == filter[0].id && hover[0].style.display == "flex"){
+        hover[0].style.display = "none"
+    }else{
+        hover[0].style.display = "flex"
+    }
+})

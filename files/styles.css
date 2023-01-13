@@ -310,6 +310,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .card-img{
     width: 4.1rem;
@@ -355,11 +356,12 @@
     background-color: var(--secundary-color);
     border-radius: 2rem;
     position: absolute;
+    bottom: -19rem;
     z-index: 1;
     padding: 2rem 0 1rem 0;
-    display: flex;
+    display: none;
     flex-direction: column;
-    justify-content: space-between;
+    gap: .5rem;
     align-items: center;
     color: var(--lighter);
 }
@@ -380,6 +382,21 @@
 .hover-lvl{
     font-size: 1.6rem;
     font-weight: normal;
+}
+.hover-type,.hover-impact{
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.hover-description{
+    font-size: 1.4rem;
+    margin: 0;
+}
+.content-hover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .1rem;
 }
 /*Portfolio*/
 .portfolio{
