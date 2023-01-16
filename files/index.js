@@ -15,21 +15,6 @@ menuIcon.addEventListener("click", () => {
     }
 })
 //Skills
-let skillBtnContent = document.getElementById("btn-skill-content")
-let skillButton = document.getElementById("btn-skills")
-
-skillButton.addEventListener("click", (e) => {
-    if (skillButton.textContent == "See more") {
-        skillButton.textContent = "See less";
-        skillBtnContent.style.flexDirection = "column-reverse";
-
-    } else {
-        skillButton.textContent = "See more";
-        skillBtnContent.style.flexDirection = "column";
-    }
-
-})
-
 let skillsList = []
 const skillsContent = document.getElementById("skills-content")
 class Skills {
@@ -96,9 +81,29 @@ skillsContent.addEventListener("click", (e)=>{
     let hover = skillsContent.getElementsByClassName(`${e.target.id}`)
     console.log(e.target.id)
     console.log(hover)
-    if(e.target.id == filter[0].id && hover[0].style.display == "flex"){
-        hover[0].style.display = "none"
+    if(e.target.id == filter[0].id && hover[0].style.opacity == "1"){
+        hover[0].style.zIndex = "0"
+        hover[0].style.opacity = "0"
     }else{
-        hover[0].style.display = "flex"
+        hover[0].style.zIndex = "1"
+        hover[0].style.opacity = "1"
     }
+})
+//Skill Button
+let skillBtnContent = document.getElementById("btn-skill-content")
+let skillButton = document.getElementById("btn-skills")
+let skillArrow = document.getElementsByClassName("skill-arrow")
+
+skillButton.addEventListener("click", () => {
+    if (skillButton.textContent == "See more") {
+        skillButton.textContent = "See less";
+        skillArrow[0].style.transform = "rotateX(180deg)"
+        skillArrow[0].style.bottom = "3.5rem"
+
+    } else {
+        skillButton.textContent = "See more";
+        skillArrow[0].style.transform = "rotateX(0)"
+        skillArrow[0].style.bottom = "-1.5rem"
+    }
+
 })

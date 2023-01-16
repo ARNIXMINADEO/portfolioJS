@@ -311,6 +311,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 .card-img{
     width: 4.1rem;
@@ -318,11 +319,8 @@
 }
 /*Skill button*/
 .btn-skill-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
+    position: relative;
+    transition: 1s;
 }
 .btn-skills{
     width: 10rem;
@@ -333,7 +331,6 @@
     background-color: transparent;
     border: none;
     padding: .1rem 0;
-    transition: all 0.3s;
 }
 .btn-skills:hover{
     color: var(--primary-color);
@@ -346,24 +343,31 @@
     background-color: transparent;
 }
 .skill-arrow{
+    transition: all 1s;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 4rem;
     width: 2rem;
     height: 2rem;
 }
 /*Skill hover card*/
 .card-hover{
+    transition: all 0.5s;
     width: 10rem;
     height: 18rem;
     background-color: var(--secundary-color);
     border-radius: 2rem;
     position: absolute;
     bottom: -19rem;
-    z-index: 1;
+    z-index: 0;
     padding: 2rem 0 1rem 0;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: .5rem;
     align-items: center;
     color: var(--lighter);
+    opacity: 0;
+    box-shadow: 2px 2px 25px -2px rgba(0,0,0,0.75);
 }
 .card-hover::after{
     content: "";
